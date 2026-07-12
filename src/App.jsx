@@ -8,7 +8,7 @@ function App() {
     const params = new URLSearchParams(window.location.search);
     if (params.get('autoScroll') === 'true') {
       let scrollAmount = 0;
-      let scrollStep = 1;
+      let scrollStep = 2;
       let isScrollingDown = true;
       let animationFrameId;
 
