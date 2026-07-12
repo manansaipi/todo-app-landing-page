@@ -1,9 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Gallery from './components/Gallery';
 
 function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('autoScroll') === 'true') {
+      let scrollAmount = 0;
+      let scrollStep = 1;
+      let isScrollingDown = true;
+      let animationFrameId;
+
+      const autoScroll = () => {
+        if (isScrollingDown) {
+          window.scrollBy(0, scrollStep);
+          if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+            isScrollingDown = false;
+            setTimeout(() => {
+              animationFrameId = requestAnimationFrame(autoScroll);
+            }, 1000);
+            return;
+          }
+        } else {
+          window.scrollBy(0, -scrollStep);
+          if (window.scrollY <= 0) {
+            isScrollingDown = true;
+            setTimeout(() => {
+              animationFrameId = requestAnimationFrame(autoScroll);
+            }, 1000);
+            return;
+          }
+        }
+        animationFrameId = requestAnimationFrame(autoScroll);
+      };
+      
+      setTimeout(() => {
+        animationFrameId = requestAnimationFrame(autoScroll);
+      }, 2000);
+
+      return () => cancelAnimationFrame(animationFrameId);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       <Hero />
