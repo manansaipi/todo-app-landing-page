@@ -25,7 +25,7 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="https://github.com/manansaipi" 
+              href="https://github.com/manansaipi/ToDo-List-Mobile-Application" 
               target="_blank" 
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 hover:bg-black text-white rounded-2xl font-semibold transition-all duration-300 shadow-xl"
