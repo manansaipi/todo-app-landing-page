@@ -13,24 +13,13 @@ function App() {
       let animationFrameId;
 
       const autoScroll = () => {
-        if (isScrollingDown) {
-          window.scrollBy(0, scrollStep);
-          if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-            isScrollingDown = false;
-            setTimeout(() => {
-              animationFrameId = requestAnimationFrame(autoScroll);
-            }, 1000);
-            return;
-          }
-        } else {
-          window.scrollBy(0, -scrollStep);
-          if (window.scrollY <= 0) {
-            isScrollingDown = true;
-            setTimeout(() => {
-              animationFrameId = requestAnimationFrame(autoScroll);
-            }, 1000);
-            return;
-          }
+        window.scrollBy(0, scrollStep);
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          setTimeout(() => {
+            animationFrameId = requestAnimationFrame(autoScroll);
+          }, 1500);
+          return;
         }
         animationFrameId = requestAnimationFrame(autoScroll);
       };
