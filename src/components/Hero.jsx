@@ -51,12 +51,12 @@ const Hero = () => {
         >
           {/* Main floating phone */}
           <div className="animate-float relative z-20">
-            <PhoneMockup imageSrc="/doc/home.png" alt="App Home Screen" />
+            <PhoneMockup imageSrc={`${import.meta.env.BASE_URL}doc/home.png`} alt="App Home Screen" />
           </div>
           
           {/* Secondary phone behind */}
           <div className="absolute top-10 right-0 lg:-right-10 opacity-60 z-10 scale-90 blur-[2px] hidden md:block" style={{ transform: 'rotate(10deg)' }}>
-            <PhoneMockup imageSrc="/doc/see-map.png" alt="Map View" />
+            <PhoneMockup imageSrc={`${import.meta.env.BASE_URL}doc/see-map.png`} alt="Map View" />
           </div>
         </motion.div>
       </div>

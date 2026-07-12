@@ -1,16 +1,16 @@
 import React from 'react';
 
 const screenshots = [
-  { src: '/doc/get-start.png', alt: 'Get Started' },
-  { src: '/doc/wake-up.png', alt: 'Wake Up Time' },
-  { src: '/doc/sleep.png', alt: 'Sleep Time' },
-  { src: '/doc/add-loc.png', alt: 'Add Location' },
-  { src: '/doc/task-created.png', alt: 'Task Created' },
-  { src: '/doc/update-task.png', alt: 'Update Task' },
-  { src: '/doc/complete.png', alt: 'Complete Task' },
-  { src: '/doc/set-time.png', alt: 'Set Time' },
-  { src: '/doc/detail-task.png', alt: 'Detail Task' },
-  { src: '/doc/delete-task.png', alt: 'Delete Task' },
+  { src: `${import.meta.env.BASE_URL}doc/get-start.png`, alt: 'Get Started' },
+  { src: `${import.meta.env.BASE_URL}doc/wake-up.png`, alt: 'Wake Up Time' },
+  { src: `${import.meta.env.BASE_URL}doc/sleep.png`, alt: 'Sleep Time' },
+  { src: `${import.meta.env.BASE_URL}doc/add-loc.png`, alt: 'Add Location' },
+  { src: `${import.meta.env.BASE_URL}doc/task-created.png`, alt: 'Task Created' },
+  { src: `${import.meta.env.BASE_URL}doc/update-task.png`, alt: 'Update Task' },
+  { src: `${import.meta.env.BASE_URL}doc/complete.png`, alt: 'Complete Task' },
+  { src: `${import.meta.env.BASE_URL}doc/set-time.png`, alt: 'Set Time' },
+  { src: `${import.meta.env.BASE_URL}doc/detail-task.png`, alt: 'Detail Task' },
+  { src: `${import.meta.env.BASE_URL}doc/delete-task.png`, alt: 'Delete Task' },
 ];
 
 const Gallery = () => {

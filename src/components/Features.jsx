@@ -39,14 +39,14 @@ const Features = () => {
           title="Location-Based Tracking" 
           description="Never forget a task when you're nearby. Integrate Google Maps to attach specific locations to each task and view them all plotted on an interactive map."
           icon={MapPin}
-          imageSrc="/doc/see-map.png"
+          imageSrc={`${import.meta.env.BASE_URL}doc/see-map.png`}
         />
 
         <FeatureRow 
           title="Intuitive Task Management" 
           description="Create tasks with rich details including titles, descriptions, start/end times, and dates. Easily view your day on a beautiful timeline view aligned with your schedule."
           icon={ListTodo}
-          imageSrc="/doc/add-task-form.png"
+          imageSrc={`${import.meta.env.BASE_URL}doc/add-task-form.png`}
           reversed
         />
 
@@ -54,14 +54,14 @@ const Features = () => {
           title="Smart Notifications" 
           description="Set your wake-up and sleep times to customize reminder windows. Receive timely, non-intrusive notifications for all your scheduled tasks."
           icon={Bell}
-          imageSrc="/doc/notification.png"
+          imageSrc={`${import.meta.env.BASE_URL}doc/notification.png`}
         />
 
         <FeatureRow 
           title="Comfortable Dark Mode" 
           description="Easy on the eyes, day or night. Toggle dark mode from the settings page for a comfortable viewing experience no matter the environment."
           icon={Moon}
-          imageSrc="/doc/dark-mode.png"
+          imageSrc={`${import.meta.env.BASE_URL}doc/dark-mode.png`}
           reversed
         />
       </div>

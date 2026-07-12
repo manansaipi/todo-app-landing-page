@@ -8,13 +8,17 @@
   body {
     @apply bg-white text-slate-900 antialiased selection:bg-slate-200 overflow-x-hidden;
     font-family: 'Inter', sans-serif;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
   }
-  
-  body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
-  }
+}
+
+/* Hide global scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+/* Hide global scrollbar for IE, Edge and Firefox */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .glass-panel {
